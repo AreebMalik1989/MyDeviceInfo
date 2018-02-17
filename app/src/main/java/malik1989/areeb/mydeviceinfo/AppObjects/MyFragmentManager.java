@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import malik1989.areeb.mydeviceinfo.R;
+import malik1989.areeb.mydeviceinfo.SettingsFragment;
 import malik1989.areeb.mydeviceinfo.SpecsFragment;
 
 /**
@@ -17,11 +18,13 @@ public class MyFragmentManager {
     private int contentFrameId;
 
     public Fragment specFragment;
+    public Fragment settingsFragment;
 
     public MyFragmentManager(AppCompatActivity activity, int contentFrameId){
         this.fragmentManager = activity.getSupportFragmentManager();
         this.contentFrameId = contentFrameId;
         this.specFragment = new SpecsFragment();
+        this.settingsFragment = new SettingsFragment();
     }
 
     public void updateFragment(Fragment fragment){
@@ -36,6 +39,11 @@ public class MyFragmentManager {
         switch (s){
             case "Home":
                 this.updateFragment(specFragment);
+                break;
+
+            case "Settings":
+                this.updateFragment(settingsFragment);
+                break;
         }
     }
 }

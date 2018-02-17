@@ -2,5 +2,6 @@
 <resources>
     <string-array name="activities">
         <item>Home</item>
+        <item>Settings</item>
     </string-array>
 </resources>
