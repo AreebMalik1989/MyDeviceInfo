@@ -1,7 +1,7 @@
 package malik1989.areeb.mydeviceinfo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class InfoActivity extends AppCompatActivity {
 

@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
-import malik1989.areeb.mydeviceinfo.R;
 import malik1989.areeb.mydeviceinfo.SettingsFragment;
 import malik1989.areeb.mydeviceinfo.SpecsFragment;
 
