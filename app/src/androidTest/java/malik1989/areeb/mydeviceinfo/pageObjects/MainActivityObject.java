@@ -1,5 +1,8 @@
 package malik1989.areeb.mydeviceinfo.pageObjects;
 
+import android.support.test.uiautomator.By;
+import android.support.test.uiautomator.BySelector;
+import android.support.test.uiautomator.UiDevice;
 import android.support.test.uiautomator.UiObject;
 import android.support.test.uiautomator.UiObjectNotFoundException;
 import android.support.test.uiautomator.UiSelector;
@@ -10,14 +13,19 @@ import android.support.test.uiautomator.UiSelector;
 
 public class MainActivityObject {
 
-    public UiObject openToggleButton = new UiObject(new UiSelector().description("Open"));
-    public UiObject closeToggleButton = new UiObject(new UiSelector().description("Close"));
+    private UiDevice uiDevice;
+    private BySelector openToggleButton = By.desc("Open");
+    private BySelector closeToggleButton = By.desc("Close");
+
+    public MainActivityObject(UiDevice uiDevice){
+        this.uiDevice = uiDevice;
+    }
 
     public void pressOpenToggleButton() throws UiObjectNotFoundException {
-        openToggleButton.clickAndWaitForNewWindow();
+        uiDevice.findObject(openToggleButton).click();
     }
 
     public void pressCloseToggleButton() throws UiObjectNotFoundException {
-        closeToggleButton.clickAndWaitForNewWindow();
+        uiDevice.findObject(closeToggleButton).click();
     }
 }
