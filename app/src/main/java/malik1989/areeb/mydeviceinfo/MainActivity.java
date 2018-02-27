@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         final ListView listView;
         final ArrayAdapter<String> adapter;
 
-        menu = getResources().getStringArray(R.array.activities);
+        menu = getResources().getStringArray(R.array.fragments);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         listView = (ListView) findViewById(R.id.left_drawer);
 
