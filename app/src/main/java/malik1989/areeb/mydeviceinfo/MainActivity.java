@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import malik1989.areeb.mydeviceinfo.AppObjects.MyFragmentManager;
+import malik1989.areeb.mydeviceinfo.appObjects.MyFragmentManager;
 
 public class MainActivity extends AppCompatActivity {
 

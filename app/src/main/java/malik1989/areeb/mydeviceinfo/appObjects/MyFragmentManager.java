@@ -1,4 +1,4 @@
-package malik1989.areeb.mydeviceinfo.AppObjects;
+package malik1989.areeb.mydeviceinfo.appObjects;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
