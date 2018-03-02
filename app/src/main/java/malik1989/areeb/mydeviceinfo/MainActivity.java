@@ -1,12 +1,14 @@
 package malik1989.areeb.mydeviceinfo;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,17 +18,21 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import malik1989.areeb.mydeviceinfo.appObjects.MyFragmentManager;
+import malik1989.areeb.mydeviceinfo.appObjects.PermissionsProvider;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActionBarDrawerToggle toggle;
     private MyFragmentManager myFragementManager;
     private Fragment specFragment;
+    private final String TAG = this.getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        runtimePermissions();
 
         setupNavigationDrawer();
 
@@ -79,6 +85,46 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return toggle != null && toggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults){
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+
+            case PermissionsProvider.REQUEST_CODE:
+
+                if(grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+
+                    Log.d(TAG, "Permission Was Granted");
+
+                } else {
+
+                    Log.d(TAG, "Permission Denied");
+
+                }
+
+        }
+
+    }
+
+    private void runtimePermissions(){
+
+        PermissionsProvider permissionsProvider = new PermissionsProvider(this, this);
+
+        if(permissionsProvider.isMarshmallowOrAbove()) {
+
+            if(!permissionsProvider.havePermissions()) {
+
+                permissionsProvider.requestPermissions();
+
+            }
+
+        }
+
     }
 
     public void setupNavigationDrawer(){
