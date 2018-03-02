@@ -4,5 +4,19 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="model_number">Model Number</string>
+    <string name="product_name">Product Name</string>
+    <string name="os_version">OS Version</string>
+    <string name="processor_name">Processor Name</string>
+    <string name="processor_core">Processor Cores</string>
+    <string name="back_camera">Back Camera</string>
+    <string name="front_camera">Front Camera</string>
+    <string name="ram">RAM</string>
+    <string name="rom">ROM</string>
+    <string name="screen_resolution">Screen Resolution</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="imei1">IMEI 1</string>
+    <string name="imei2">IMEI 2</string>
+    <string name="permission_denied">Permission Denied!</string>
 
 </resources>
