@@ -18,6 +18,7 @@ public class MyFragmentManager {
 
     public Fragment specFragment;
     public Fragment settingsFragment;
+    public Fragment batteryFragment;
 
     public MyFragmentManager(AppCompatActivity activity, int contentFrameId){
         this.fragmentManager = activity.getSupportFragmentManager();
@@ -42,6 +43,10 @@ public class MyFragmentManager {
 
             case "Settings":
                 this.updateFragment(settingsFragment);
+                break;
+
+            case "Battery":
+                this.updateFragment(batteryFragment);
                 break;
         }
     }
