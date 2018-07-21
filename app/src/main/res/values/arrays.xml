@@ -2,6 +2,7 @@
 <resources>
     <string-array name="fragments">
         <item>Home</item>
+        <item>Battery</item>
         <item>Settings</item>
     </string-array>
 </resources>
