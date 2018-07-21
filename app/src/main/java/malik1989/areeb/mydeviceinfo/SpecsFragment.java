@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import malik1989.areeb.mydeviceinfo.adapters.DevicePropertiesAdapter;
+import malik1989.areeb.mydeviceinfo.adapters.DevicePropertiesAdapter1;
 import malik1989.areeb.mydeviceinfo.appObjects.SpecsManager;
 import malik1989.areeb.mydeviceinfo.dto.DeviceProperty;
 import malik1989.areeb.mydeviceinfo.dto.Specs;
@@ -22,7 +22,7 @@ public class SpecsFragment extends Fragment {
 
     private View myview;
     private RecyclerView recyclerView;
-    private DevicePropertiesAdapter devicePropertiesAdapter;
+    private DevicePropertiesAdapter1 devicePropertiesAdapter1;
     private boolean running=true;
     private Specs specs;
     private SpecsManager specsManager;
@@ -41,14 +41,13 @@ public class SpecsFragment extends Fragment {
         recyclerView = myview.findViewById(R.id.specs_recyclerview);
         specsManager = new SpecsManager(getContext(), getActivity());
         devicePropertyList = new ArrayList<>();
-        devicePropertiesAdapter = new DevicePropertiesAdapter(devicePropertyList);
+        devicePropertiesAdapter1 = new DevicePropertiesAdapter1(devicePropertyList);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
-        recyclerView.setAdapter(devicePropertiesAdapter);
-
+        recyclerView.setAdapter(devicePropertiesAdapter1);
 
         setup();
 
@@ -83,7 +82,7 @@ public class SpecsFragment extends Fragment {
         devicePropertyList.add(new DeviceProperty(getString(R.string.imei1), specs.getImei1()));
         devicePropertyList.add(new DeviceProperty(getString(R.string.imei2), specs.getImei2()));
 
-        devicePropertiesAdapter.notifyDataSetChanged();
+        devicePropertiesAdapter1.notifyDataSetChanged();
 
         return true;
     }
