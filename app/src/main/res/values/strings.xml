@@ -18,5 +18,6 @@
     <string name="imei1">IMEI 1</string>
     <string name="imei2">IMEI 2</string>
     <string name="permission_denied">Permission Denied!</string>
+    <string name="evaluating">Evaluating...</string>
 
 </resources>
