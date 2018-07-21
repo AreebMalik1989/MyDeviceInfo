@@ -15,16 +15,16 @@ import malik1989.areeb.mydeviceinfo.dto.DeviceProperty;
  * Created by areeb on 27/2/18.
  */
 
-public class DevicePropertiesAdapter extends RecyclerView.Adapter<DevicePropertiesAdapter.MyViewHolder> {
+public class DevicePropertiesAdapter1 extends RecyclerView.Adapter<DevicePropertiesAdapter1.MyViewHolder> {
 
     private List<DeviceProperty> devicePropertyList;
 
-    public DevicePropertiesAdapter(List<DeviceProperty> devicePropertyList){
+    public DevicePropertiesAdapter1(List<DeviceProperty> devicePropertyList){
         this.devicePropertyList = devicePropertyList;
     }
 
     @Override
-    public DevicePropertiesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public DevicePropertiesAdapter1.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.property_list_row, parent, false);
 
@@ -32,7 +32,7 @@ public class DevicePropertiesAdapter extends RecyclerView.Adapter<DeviceProperti
     }
 
     @Override
-    public void onBindViewHolder(DevicePropertiesAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(DevicePropertiesAdapter1.MyViewHolder holder, int position) {
         DeviceProperty deviceProperty = devicePropertyList.get(position);
         holder.property.setText(deviceProperty.getProperty());
         holder.value.setText(deviceProperty.getValue());
