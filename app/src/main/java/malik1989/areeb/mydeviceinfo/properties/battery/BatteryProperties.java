@@ -1,19 +1,20 @@
-package malik1989.areeb.mydeviceinfo.DeviceProperty.Battery;
+package malik1989.areeb.mydeviceinfo.properties.battery;
 
 import java.util.Map;
 
-import malik1989.areeb.mydeviceinfo.DeviceProperty.DeviceProperty;
-import malik1989.areeb.mydeviceinfo.DeviceProperty.DevicePropertyConstants;
+import malik1989.areeb.mydeviceinfo.R;
+import malik1989.areeb.mydeviceinfo.properties.DeviceProperties;
+import malik1989.areeb.mydeviceinfo.properties.DevicePropertyConstants;
 
 /**
  * Created by areeb on 21/7/18.
  */
 
-public class BatteryProperty implements DeviceProperty {
+public class BatteryProperties implements DeviceProperties {
 
     private static Map<String, String> batteryProperties;
 
-    public BatteryProperty() {
+    public BatteryProperties() {
 
         batteryProperties.put(DevicePropertyConstants.BatteryFields.IS_PRESENT, "");
         batteryProperties.put(DevicePropertyConstants.BatteryFields.TECHNOLOGY, "");
