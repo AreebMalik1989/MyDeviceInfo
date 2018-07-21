@@ -1,4 +1,4 @@
-package malik1989.areeb.mydeviceinfo.DeviceProperty.Battery;
+package malik1989.areeb.mydeviceinfo.properties.battery;
 
 /**
  * Created by areeb on 21/7/18.
