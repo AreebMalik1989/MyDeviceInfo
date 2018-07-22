@@ -4,9 +4,7 @@ package malik1989.areeb.mydeviceinfo.model;
  * Created by areeb on 22/7/18.
  */
 
-public class Battery {
-
-    private boolean isPresent;
+public class Battery {private boolean isPresent;
     private String technology;
     private int plugged;
     private int health;
@@ -14,21 +12,6 @@ public class Battery {
     private int voltage;
     private int temperature;
     private int level;
-
-    public Battery(){
-
-    }
-
-    public Battery(boolean isPresent, String technology, int plugged, int health, int status, int voltage, int temperature, int level) {
-        this.isPresent = isPresent;
-        this.technology = technology;
-        this.plugged = plugged;
-        this.health = health;
-        this.status = status;
-        this.voltage = voltage;
-        this.temperature = temperature;
-        this.level = level;
-    }
 
     public boolean isPresent() {
         return isPresent;
