@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import malik1989.areeb.mydeviceinfo.SettingsFragment;
 import malik1989.areeb.mydeviceinfo.SpecsFragment;
+import malik1989.areeb.mydeviceinfo.fragments.BatteryFragment;
 
 /**
  * Created by areeb on 17/2/18.
@@ -25,6 +26,7 @@ public class MyFragmentManager {
         this.contentFrameId = contentFrameId;
         this.specFragment = new SpecsFragment();
         this.settingsFragment = new SettingsFragment();
+        this.batteryFragment = new BatteryFragment();
     }
 
     public void updateFragment(Fragment fragment){

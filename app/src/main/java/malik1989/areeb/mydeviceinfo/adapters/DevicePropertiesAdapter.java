@@ -27,7 +27,9 @@ public class DevicePropertiesAdapter extends RecyclerView.Adapter<DeviceProperti
         for(Map.Entry<String, String> entry : devicePropertyMap.entrySet()){
             devicePropertyList.add(new DeviceProperty(entry.getKey(), entry.getValue()));
         }
-    }@Override
+    }
+
+    @Override
     public DevicePropertiesAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.property_list_row, parent, false);
