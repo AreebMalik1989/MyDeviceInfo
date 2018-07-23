@@ -5,20 +5,30 @@ package malik1989.areeb.mydeviceinfo.model;
  */
 
 public class Apk {
+    
+    private List<ApkObserver> observers = new ArrayList<>();
 
-    public String packageName;
+    private String packageName;
 
-    public String versionName;
+    private String versionName;
 
-    public int versionCode;
+    private int versionCode;
 
-    public long firstInstallTime;
+    private long firstInstallTime;
 
-    public long lastUpdateTime;
+    private long lastUpdateTime;
 
-    public int sharedUserLabel;
+    private int sharedUserLabel;
 
-    public String sharedUserId;
+    private String sharedUserId;
+    
+    public void addObserver(ApkObserver apkObserver){
+        observers.add(apkObserver);
+    }
+    
+    public void removeObserver(ApkObserver apkObserver){
+        observers.remove(apkObserver);
+    }
 
     public String getPackageName() {
         return packageName;
@@ -26,6 +36,13 @@ public class Apk {
 
     public void setPackageName(String packageName) {
         this.packageName = packageName;
+        notifyPackageNameChange();
+    }
+    
+    public void notifyPackageNameChange() {
+        for(ApkObserver observer : observers) {
+            observer.updatePackageName(getPackageName());
+        }
     }
 
     public String getVersionName() {
@@ -34,6 +51,13 @@ public class Apk {
 
     public void setVersionName(String versionName) {
         this.versionName = versionName;
+        notifyVersionNameChange();
+    }
+    
+    public void notifyVersionNameChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateVersionName(getVersionName());
+        }
     }
 
     public int getVersionCode() {
@@ -42,6 +66,13 @@ public class Apk {
 
     public void setVersionCode(int versionCode) {
         this.versionCode = versionCode;
+        notifyVersionCodeChange();
+    }
+    
+    public void notifyVersionCodeChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateVersionCode(getVersionCode());
+        }
     }
 
     public long getFirstInstallTime() {
@@ -50,6 +81,13 @@ public class Apk {
 
     public void setFirstInstallTime(long firstInstallTime) {
         this.firstInstallTime = firstInstallTime;
+        notifyFirstInstallTimeChange();
+    }
+    
+    public void notifyFirstInstallTimeChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateFirstInstallTime(getFirstInstallTime());
+        }
     }
 
     public long getLastUpdateTime() {
@@ -58,6 +96,13 @@ public class Apk {
 
     public void setLastUpdateTime(long lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
+        notifyLastUpdateTimeChange();
+    }
+    
+    public void notifyLastUpdateTimeChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateLastUpdateTime(getLastUpdateTime());
+        }
     }
 
     public int getSharedUserLabel() {
@@ -66,6 +111,13 @@ public class Apk {
 
     public void setSharedUserLabel(int sharedUserLabel) {
         this.sharedUserLabel = sharedUserLabel;
+        notifySharedUserLabelChange();
+    }
+    
+    public void notifySharedUserLabelChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateSharedUserLabel(getSharedUserLabel());
+        }
     }
 
     public String getSharedUserId() {
@@ -74,6 +126,19 @@ public class Apk {
 
     public void setSharedUserId(String sharedUserId) {
         this.sharedUserId = sharedUserId;
+        notifySharedUserIdChange();
+    }
+    
+    public void notifySharedUserIdChange() {
+        for(ApkObserver observer : observers) {
+            observer.updateSharedUserId(getSharedUserId());
+        }
+    }
+    
+    public void notifyChange() {
+        for(ApkObserver observer : observers) {
+            observer.update(this);
+        }
     }
 
     @Override
