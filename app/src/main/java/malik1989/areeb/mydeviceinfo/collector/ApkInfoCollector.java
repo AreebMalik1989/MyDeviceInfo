@@ -13,7 +13,13 @@ import malik1989.areeb.mydeviceinfo.model.Apk;
 
 public class ApkInfoCollector{
 
-    public Apk collect(Context context){
+    Context context;
+
+    public ApkInfoCollector(Context context){
+        this.context = context;
+    }
+
+    public Apk collect(){
 
         Apk apk = new Apk();
 
