@@ -6,21 +6,14 @@ package malik1989.areeb.mydeviceinfo.model;
 
 public class Wifi {
 
-    public int state;
-
-    public String bssid;
-
-    public String ssid;
-
-    public int ipAddress;
-
-    public String macAddress;
-
-    public int networkId;
-
-    public int linkSpeed;
-
-    public int rssi;
+    protected int state;
+    protected String bssid;
+    protected String ssid;
+    protected int ipAddress;
+    protected String macAddress;
+    protected int networkId;
+    protected int linkSpeed;
+    protected int rssi;
 
     public int getState() {
         return state;
