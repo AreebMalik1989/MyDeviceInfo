@@ -12,59 +12,33 @@ import java.util.List;
 
 public class Telephony {
 
-    public String deviceSoftwareVersion;
-
-    public String deviceId;
-
-    public List<NeighboringCellInfo> neighboringCellInfo;
-
-    public CellLocation cellLocation;
-
-    public int phoneType;
-
-    public String networkOperatorName;
-
-    public String networkOperator;
-
-    public boolean isNetworkRoaming;
-
-    public String networkCountryIso;
-
-    public int networkType;
-
-    public boolean hasIccCard;
-
-    public int simState;
-
-    public String simOperator;
-
-    public String simOperatorName;
-
-    public String simCountryIso;
-
-    public String simSerialNumber;
-
-    public String subscriberId;
-
-    public String groupIdLevel1;
-
-    public String line1Number;
-
-    public String voiceMailNumber;
-
-    public String voiceMailAlphaTag;
-
-    public int callState;
-
-    public int dataActivity;
-
-    public int dataState;
-
-    public List<CellInfo> allCellInfo;
-
-    public String mmsUserAgent;
-
-    public String mmsUAProfUrl;
+    protected String deviceSoftwareVersion;
+    protected String deviceId;
+    protected List<NeighboringCellInfo> neighboringCellInfo;
+    protected CellLocation cellLocation;
+    protected int phoneType;
+    protected String networkOperatorName;
+    protected String networkOperator;
+    protected boolean isNetworkRoaming;
+    protected String networkCountryIso;
+    protected int networkType;
+    protected boolean hasIccCard;
+    protected int simState;
+    protected String simOperator;
+    protected String simOperatorName;
+    protected String simCountryIso;
+    protected String simSerialNumber;
+    protected String subscriberId;
+    protected String groupIdLevel1;
+    protected String line1Number;
+    protected String voiceMailNumber;
+    protected String voiceMailAlphaTag;
+    protected int callState;
+    protected int dataActivity;
+    protected int dataState;
+    protected List<CellInfo> allCellInfo;
+    protected String mmsUserAgent;
+    protected String mmsUAProfUrl;
 
     public String getDeviceSoftwareVersion() {
         return deviceSoftwareVersion;
