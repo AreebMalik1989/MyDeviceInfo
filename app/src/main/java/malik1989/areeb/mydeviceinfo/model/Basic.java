@@ -6,63 +6,35 @@ package malik1989.areeb.mydeviceinfo.model;
 
 public class Basic {
 
-    public String uuid;
-
-    public String imei;
-
-    public String imsi;
-
-    public String kernel_version;
-
-    public boolean root;
-
-    public String model;
-
-    public String manufacturer;
-
-    public String board;
-
-    public String fingerprint;
-
-    public String bootloader;
-
-    public String brand;
-
-    public String cpu_abi;
-
-    public String cpu_abi2;
-
-    public String device;
-
-    public String display;
-
-    public String hardware;
-
-    public String host;
-
-    public String id;
-
-    public String product;
-
-    public String serial;
-
-    public String tags;
-
-    public String type;
-
-    public String user;
-
-    public long time;
-
-    public int version_sdk_int;
-
-    public String version_codename;
-
-    public String version_release;
-
-    public String version_incremental;
-
-    public String net_hostname;
+    protected String uuid;
+    protected String imei;
+    protected String imsi;
+    protected String kernel_version;
+    protected boolean root;
+    protected String model;
+    protected String manufacturer;
+    protected String board;
+    protected String fingerprint;
+    protected String bootloader;
+    protected String brand;
+    protected String cpu_abi;
+    protected String cpu_abi2;
+    protected String device;
+    protected String display;
+    protected String hardware;
+    protected String host;
+    protected String id;
+    protected String product;
+    protected String serial;
+    protected String tags;
+    protected String type;
+    protected String user;
+    protected long time;
+    protected int version_sdk_int;
+    protected String version_codename;
+    protected String version_release;
+    protected String version_incremental;
+    protected String net_hostname;
 
     public String getUuid() {
         return uuid;
