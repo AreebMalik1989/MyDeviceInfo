@@ -7,17 +7,11 @@ package malik1989.areeb.mydeviceinfo.model;
 public class Apk {
 
     protected String packageName;
-
     protected String versionName;
-
     protected int versionCode;
-
     protected long firstInstallTime;
-
     protected long lastUpdateTime;
-
     protected int sharedUserLabel;
-
     protected String sharedUserId;
 
     public String getPackageName() {
