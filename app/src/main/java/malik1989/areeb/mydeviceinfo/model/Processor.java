@@ -6,25 +6,16 @@ package malik1989.areeb.mydeviceinfo.model;
 
 public class Processor {
 
-    public String processor;
-
-    public String features;
-
-    public String cpu_implementer;
-
-    public String cpu_architecture;
-
-    public String cpu_variant;
-
-    public String cpu_part;
-
-    public String cpu_revision;
-
-    public String hardware;
-
-    public String revision;
-
-    public String serial;
+    protected String processor;
+    protected String features;
+    protected String cpu_implementer;
+    protected String cpu_architecture;
+    protected String cpu_variant;
+    protected String cpu_part;
+    protected String cpu_revision;
+    protected String hardware;
+    protected String revision;
+    protected String serial;
 
     public String getProcessor() {
         return processor;
