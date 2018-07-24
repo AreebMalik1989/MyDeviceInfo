@@ -6,6 +6,8 @@ import malik1989.areeb.mydeviceinfo.model.Battery;
 import malik1989.areeb.mydeviceinfo.model.Processor;
 import malik1989.areeb.mydeviceinfo.model.Telephony;
 import malik1989.areeb.mydeviceinfo.model.Wifi;
+import malik1989.areeb.mydeviceinfo.observable.ObservableApk;
+import malik1989.areeb.mydeviceinfo.observable.ObservableBasic;
 
 /**
  * Created by areeb on 23/7/18.
@@ -13,11 +15,7 @@ import malik1989.areeb.mydeviceinfo.model.Wifi;
 
 public interface DataExchange {
 
-    Apk apk = new Apk();
-    Basic basic = new Basic();
-    Battery battery = new Battery();
-    Processor processor = new Processor();
-    Telephony telephony = new Telephony();
-    Wifi wifi = new Wifi();
+    ObservableApk apk = new ObservableApk();
+    ObservableBasic basic = new ObservableBasic();
 
 }
