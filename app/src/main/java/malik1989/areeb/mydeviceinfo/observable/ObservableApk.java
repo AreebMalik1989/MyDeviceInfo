@@ -28,8 +28,6 @@ public class ObservableApk extends Apk {
         setVersionCode(apk.getVersionCode());
         setFirstInstallTime(apk.getFirstInstallTime());
         setLastUpdateTime(apk.getLastUpdateTime());
-        setSharedUserLabel(apk.getSharedUserLabel());
-        setSharedUserId(apk.getSharedUserId());
 
         notifyChange();
     }
