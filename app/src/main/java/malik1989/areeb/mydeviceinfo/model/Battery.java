@@ -1,34 +1,18 @@
-package malik1989.areeb.mydeviceinfo.properties.battery;
+package malik1989.areeb.mydeviceinfo.model;
 
 /**
- * Created by areeb on 21/7/18.
+ * Created by areeb on 22/7/18.
  */
 
-public class Battery {
+public class Battery {private boolean isPresent;
 
-    private boolean isPresent;
-    private String technology;
-    private int plugged;
-    private int health;
-    private int status;
-    private int voltage;
-    private int temperature;
-    private int level;
-
-    public Battery(){
-
-    }
-
-    public Battery(boolean isPresent, String technology, int plugged, int health, int status, int voltage, int temperature, int level) {
-        this.isPresent = isPresent;
-        this.technology = technology;
-        this.plugged = plugged;
-        this.health = health;
-        this.status = status;
-        this.voltage = voltage;
-        this.temperature = temperature;
-        this.level = level;
-    }
+    protected String technology;
+    protected int plugged;
+    protected int health;
+    protected int status;
+    protected int voltage;
+    protected int temperature;
+    protected int level;
 
     public boolean isPresent() {
         return isPresent;
