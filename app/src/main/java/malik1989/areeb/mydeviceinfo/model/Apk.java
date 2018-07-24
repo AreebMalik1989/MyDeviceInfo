@@ -11,8 +11,6 @@ public class Apk {
     protected int versionCode;
     protected long firstInstallTime;
     protected long lastUpdateTime;
-    protected int sharedUserLabel;
-    protected String sharedUserId;
 
     public String getPackageName() {
         return packageName;
@@ -54,22 +52,6 @@ public class Apk {
         this.lastUpdateTime = lastUpdateTime;
     }
 
-    public int getSharedUserLabel() {
-        return sharedUserLabel;
-    }
-
-    public void setSharedUserLabel(int sharedUserLabel) {
-        this.sharedUserLabel = sharedUserLabel;
-    }
-
-    public String getSharedUserId() {
-        return sharedUserId;
-    }
-
-    public void setSharedUserId(String sharedUserId) {
-        this.sharedUserId = sharedUserId;
-    }
-
     @Override
     public String toString() {
         return "ApkInfo{" +
@@ -78,8 +60,6 @@ public class Apk {
                 ", versionCode=" + versionCode +
                 ", firstInstallTime=" + firstInstallTime +
                 ", lastUpdateTime=" + lastUpdateTime +
-                ", sharedUserLabel=" + sharedUserLabel +
-                ", sharedUserId='" + sharedUserId + '\'' +
                 '}';
     }
 }

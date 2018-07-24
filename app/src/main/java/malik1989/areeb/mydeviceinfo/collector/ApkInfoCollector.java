@@ -1,10 +1,9 @@
 package malik1989.areeb.mydeviceinfo.collector;
 
-import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.util.Log;
 
+import malik1989.areeb.mydeviceinfo.app.MainApp;
 import malik1989.areeb.mydeviceinfo.model.Apk;
 
 /**
@@ -13,26 +12,18 @@ import malik1989.areeb.mydeviceinfo.model.Apk;
 
 public class ApkInfoCollector{
 
-    Context context;
-
-    public ApkInfoCollector(Context context){
-        this.context = context;
-    }
-
-    public Apk collect(){
+    public static Apk collect(){
 
         Apk apk = new Apk();
 
-        PackageInfo packageInfo = getPackageInfo(context.getApplicationContext().getPackageManager(),
-                context.getApplicationContext().getPackageName());
+        PackageInfo packageInfo = getPackageInfo(MainApp.getApp().getPackageManager(),
+                MainApp.getApp().getPackageName());
 
         apk.setPackageName(packageInfo.packageName);
         apk.setVersionName(packageInfo.versionName);
         apk.setVersionCode(packageInfo.versionCode);
         apk.setFirstInstallTime(packageInfo.firstInstallTime);
         apk.setLastUpdateTime(packageInfo.lastUpdateTime);
-        apk.setSharedUserLabel(packageInfo.sharedUserLabel);
-        apk.setSharedUserId(packageInfo.sharedUserId);
 
         return apk;
     }
