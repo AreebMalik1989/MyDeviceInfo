@@ -8,6 +8,7 @@ import malik1989.areeb.mydeviceinfo.model.Telephony;
 import malik1989.areeb.mydeviceinfo.model.Wifi;
 import malik1989.areeb.mydeviceinfo.observable.ObservableApk;
 import malik1989.areeb.mydeviceinfo.observable.ObservableBasic;
+import malik1989.areeb.mydeviceinfo.observable.ObservableBattery;
 
 /**
  * Created by areeb on 23/7/18.
@@ -17,5 +18,6 @@ public interface DataExchange {
 
     ObservableApk apk = new ObservableApk();
     ObservableBasic basic = new ObservableBasic();
+    ObservableBattery battery = new ObservableBattery();
 
 }
