@@ -7,9 +7,6 @@ import android.test.ActivityInstrumentationTestCase2;
 
 import junit.framework.Assert;
 
-import org.junit.runner.RunWith;
-
-import malik1989.areeb.mydeviceinfo.InfoActivity;
 import malik1989.areeb.mydeviceinfo.MainActivity;
 import malik1989.areeb.mydeviceinfo.R;
 import malik1989.areeb.mydeviceinfo.pageObjects.MainActivityObject;
