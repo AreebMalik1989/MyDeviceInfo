@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="fragments">
-        <item>Home</item>
-        <item>Battery</item>
-        <item>Settings</item>
+        <item>Wifi</item>
     </string-array>
 </resources>
