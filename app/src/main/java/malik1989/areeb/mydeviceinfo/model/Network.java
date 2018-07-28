@@ -10,7 +10,7 @@ import java.util.List;
  * Created by areeb on 22/7/18.
  */
 
-public class Telephony {
+public class Network {
 
     protected String deviceSoftwareVersion;
     protected String deviceId;
