@@ -4,6 +4,7 @@ import android.app.Application;
 
 import malik1989.areeb.mydeviceinfo.collector.ApkInfoCollector;
 import malik1989.areeb.mydeviceinfo.collector.BasicInfoCollector;
+import malik1989.areeb.mydeviceinfo.collector.NetworkInfoCollector;
 import malik1989.areeb.mydeviceinfo.exchange.DataExchange;
 
 /**
@@ -18,18 +19,13 @@ public class MainApp extends Application {
     public void onCreate(){
         super.onCreate();
         mainApp = this;
-        setupInfo.run();
+
+        DataExchange.apk.updateApkInfo(ApkInfoCollector.collect());
+        DataExchange.basic.updateBasicInfo(BasicInfoCollector.collect());
+        DataExchange.network.updateNetworkInfo(NetworkInfoCollector.collect());
     }
 
     public static MainApp getApp(){
         return mainApp;
     }
-
-    Thread setupInfo = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            DataExchange.apk.updateApkInfo(ApkInfoCollector.collect());
-            DataExchange.basic.updateBasicInfo(BasicInfoCollector.collect());
-        }
-    });
 }
