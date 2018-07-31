@@ -11,7 +11,7 @@ import malik1989.areeb.mydeviceinfo.observer.WifiObserver;
 
 public class ObservableWifi extends Wifi {
 
-    private static ArrayList<WifiObserver> observers = new ArrayList<>();
+    private ArrayList<WifiObserver> observers = new ArrayList<>();
 
     public void addObserver(WifiObserver wifiObserver){
         observers.add(wifiObserver);
