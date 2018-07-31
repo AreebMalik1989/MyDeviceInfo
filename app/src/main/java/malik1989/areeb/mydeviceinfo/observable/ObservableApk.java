@@ -2,8 +2,8 @@ package malik1989.areeb.mydeviceinfo.observable;
 
 import java.util.ArrayList;
 
-import malik1989.areeb.mydeviceinfo.observer.ApkObserver;
 import malik1989.areeb.mydeviceinfo.model.Apk;
+import malik1989.areeb.mydeviceinfo.observer.ApkObserver;
 
 /**
  * Created by areeb on 23/7/18.

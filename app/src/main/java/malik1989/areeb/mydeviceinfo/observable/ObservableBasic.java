@@ -49,8 +49,6 @@ public class ObservableBasic extends Basic {
         notifyChange();
     }
 
-
-
     private void notifyChange() {
         for(BasicObserver observer : observers) {
             observer.update(this);
