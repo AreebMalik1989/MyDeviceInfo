@@ -11,7 +11,7 @@ import malik1989.areeb.mydeviceinfo.observer.NetworkObserver;
 
 public class ObservableNetwork extends Network {
 
-    private static ArrayList<NetworkObserver> observers = new ArrayList<>();
+    private ArrayList<NetworkObserver> observers = new ArrayList<>();
 
     public void addObserver(NetworkObserver networkObserver){
         observers.add(networkObserver);
