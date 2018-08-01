@@ -56,7 +56,7 @@ public class BatteryFragment extends BaseFragment implements BatteryObserver {
         devicePropertyList.add(new DeviceProperty("Health", BatteryUtil.health(battery.getHealth())));
         devicePropertyList.add(new DeviceProperty("Status", BatteryUtil.status(battery.getStatus())));
         devicePropertyList.add(new DeviceProperty("Voltage", BatteryUtil.voltage(battery.getVoltage())));
-        devicePropertyList.add(new DeviceProperty("Temperature", String.valueOf(battery.getTemperature())));
+        devicePropertyList.add(new DeviceProperty("Temperature", BatteryUtil.temperature(battery.getTemperature())));
         devicePropertyList.add(new DeviceProperty("Level", String.valueOf(battery.getLevel())));
 
         devicePropertiesAdapter.notifyDataSetChanged();
