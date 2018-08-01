@@ -2,6 +2,8 @@ package malik1989.areeb.mydeviceinfo;
 
 import android.test.ActivityInstrumentationTestCase2;
 
+import malik1989.areeb.mydeviceinfo.ui.activity.InfoActivity;
+
 /**
  * Created by areeb on 17/2/18.
  */
