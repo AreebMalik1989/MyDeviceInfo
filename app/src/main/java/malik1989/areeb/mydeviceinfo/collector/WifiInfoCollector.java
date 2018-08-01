@@ -15,14 +15,14 @@ public class WifiInfoCollector {
 
     public static Wifi collect(){
 
-        WifiManager wifiService = (WifiManager) MainApp.getApp().getApplicationContext()
+        WifiManager wifiManager = (WifiManager) MainApp.getApp().getApplicationContext()
                 .getSystemService(Context.WIFI_SERVICE);
 
-        WifiInfo wifiInfo = wifiService.getConnectionInfo();
+        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
 
         Wifi wifi = new Wifi();
 
-        wifi.setState(wifiService.getWifiState());
+        wifi.setState(wifiManager.getWifiState());
         wifi.setBssid(wifiInfo.getBSSID());
         wifi.setSsid(wifiInfo.getSSID());
         wifi.setIpAddress(wifiInfo.getIpAddress());
