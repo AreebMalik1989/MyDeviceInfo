@@ -4,7 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
-import malik1989.areeb.mydeviceinfo.ui.fragment.ApkFragment;
 import malik1989.areeb.mydeviceinfo.ui.fragment.BatteryFragment;
 import malik1989.areeb.mydeviceinfo.ui.fragment.HomeFragment;
 import malik1989.areeb.mydeviceinfo.ui.fragment.NetworkFragment;
@@ -33,7 +32,6 @@ public class MyFragmentManager {
         this.batteryFragment = new BatteryFragment();
         this.homeFragment = new HomeFragment();
         this.networkFragment = new NetworkFragment();
-        this.apkFragment = new ApkFragment();
     }
 
     public void updateFragment(Fragment fragment){
@@ -57,10 +55,6 @@ public class MyFragmentManager {
 
             case "Network":
                 this.updateFragment(networkFragment);
-                break;
-
-            case "Apk":
-                this.updateFragment(apkFragment);
                 break;
         }
     }
