@@ -67,8 +67,8 @@ public class NetworkFragment extends BaseFragment implements NetworkObserver {
         devicePropertyList.add(new DeviceProperty("MMS UA Profile URL", String.valueOf(network.getMmsUAProfUrl())));
         devicePropertyList.add(new DeviceProperty("Device Software Version", String.valueOf(network.getDeviceSoftwareVersion())));
         devicePropertyList.add(new DeviceProperty("Device ID", String.valueOf(network.getDeviceId())));
-        devicePropertyList.add(new DeviceProperty("Neighbouring Cell Info", String.valueOf(network.getNeighboringCellInfo().toArray())));
-        devicePropertyList.add(new DeviceProperty("All Cell Info", String.valueOf(network.getAllCellInfo().toArray())));
+        devicePropertyList.add(new DeviceProperty("Neighbouring Cell Info", NetworkUtil.neighbouringCellInfo(network.getNeighboringCellInfo())));
+        devicePropertyList.add(new DeviceProperty("All Cell Info", NetworkUtil.allCellInfo(network.getAllCellInfo())));
 
         devicePropertiesAdapter.notifyDataSetChanged();
     }
