@@ -5,6 +5,5 @@
         <item>Battery</item>
         <item>Network</item>
         <item>Wifi</item>
-        <item>Apk</item>
     </string-array>
 </resources>
