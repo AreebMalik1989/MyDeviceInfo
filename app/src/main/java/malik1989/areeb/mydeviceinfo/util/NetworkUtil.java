@@ -1,6 +1,11 @@
 package malik1989.areeb.mydeviceinfo.util;
 
+import android.telephony.CellInfo;
+import android.telephony.CellLocation;
+import android.telephony.NeighboringCellInfo;
 import android.telephony.TelephonyManager;
+
+import java.util.List;
 
 /**
  * Created by areeb on 28/7/18.
@@ -138,5 +143,29 @@ public class NetworkUtil {
             default:
                 return "Unknown";
         }
+    }
+
+    public static String neighbouringCellInfo(List<NeighboringCellInfo> neighboringCellInfos){
+
+        String result = "";
+
+        for(NeighboringCellInfo info : neighboringCellInfos){
+
+            result = result + info.toString() + "\n\n";
+        }
+
+        return result.trim();
+    }
+
+    public static String allCellInfo(List<CellInfo> cellInfos){
+
+        String result = "";
+
+        for(CellInfo info : cellInfos){
+
+            result = result + info.toString() + "\n\n";
+        }
+
+        return result.trim();
     }
 }
