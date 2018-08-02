@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
+
     compileSdkVersion 27
+
     defaultConfig {
         applicationId "malik1989.areeb.mydeviceinfo"
         minSdkVersion 21
@@ -11,6 +13,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
