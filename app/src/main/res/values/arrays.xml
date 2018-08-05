@@ -2,6 +2,8 @@
 <resources>
     <string-array name="fragments">
         <item>Home</item>
+        <item>SIM</item>
+        <item>Sensor</item>
         <item>Battery</item>
         <item>Network</item>
         <item>Wifi</item>
