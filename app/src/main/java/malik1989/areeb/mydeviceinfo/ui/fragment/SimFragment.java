@@ -80,12 +80,8 @@ public class SimFragment extends Fragment implements SimObserver {
 
         subscriptionInfoList.removeAll(subscriptionInfoList.subList(0, subscriptionInfoList.size()));
 
-        for(SubscriptionInfo subscriptionInfo : sim.getActiveMultiSimInfo()){
-            subscriptionInfoList.add(subscriptionInfo);
-        }
+        subscriptionInfoList.addAll(sim.getActiveMultiSimInfo());
 
         simSubscriptionAdapter.notifyDataSetChanged();
-
-
     }
 }
