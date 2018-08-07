@@ -13,43 +13,43 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import malik1989.areeb.mydeviceinfo.app.MainApp;
-import malik1989.areeb.mydeviceinfo.model.Basic;
+import malik1989.areeb.mydeviceinfo.model.Device;
 
 /**
  * Created by areeb on 24/7/18.
  */
 
-public class BasicInfoCollector {
+public class DeviceInfoCollector {
 
-    public static Basic collect() {
+    public static Device collect() {
 
-        Basic basic = new Basic();
+        Device device = new Device();
 
-        basic.setImei(getIMEI(MainApp.getApp()));
-        basic.setImsi(getIMSI(MainApp.getApp()));
-        basic.setRoot(isRoot());
-        basic.setModel(Build.MODEL);
-        basic.setManufacturer(Build.MANUFACTURER);
-        basic.setBoard(Build.BOARD);
-        basic.setFingerprint(Build.FINGERPRINT);
-        basic.setBootloader(Build.BOOTLOADER);
-        basic.setBrand(Build.BRAND);
-        basic.setDevice(Build.DEVICE);
-        basic.setDisplay(Build.DISPLAY);
-        basic.setHardware(Build.HARDWARE);
-        basic.setHost(Build.HOST);
-        basic.setId(Build.ID);
-        basic.setProduct(Build.PRODUCT);
-        basic.setTags(Build.TAGS);
-        basic.setType(Build.TYPE);
-        basic.setUser(Build.USER);
-        basic.setTime(Build.TIME);
-        basic.setVersionSdkInt(Build.VERSION.SDK_INT);
-        basic.setVersionCodename(Build.VERSION.CODENAME);
-        basic.setVersionRelease(Build.VERSION.RELEASE);
-        basic.setVersionIncremental(Build.VERSION.INCREMENTAL);
+        device.setImei(getIMEI(MainApp.getApp()));
+        device.setImsi(getIMSI(MainApp.getApp()));
+        device.setRoot(isRoot());
+        device.setModel(Build.MODEL);
+        device.setManufacturer(Build.MANUFACTURER);
+        device.setBoard(Build.BOARD);
+        device.setFingerprint(Build.FINGERPRINT);
+        device.setBootloader(Build.BOOTLOADER);
+        device.setBrand(Build.BRAND);
+        device.setDevice(Build.DEVICE);
+        device.setDisplay(Build.DISPLAY);
+        device.setHardware(Build.HARDWARE);
+        device.setHost(Build.HOST);
+        device.setId(Build.ID);
+        device.setProduct(Build.PRODUCT);
+        device.setTags(Build.TAGS);
+        device.setType(Build.TYPE);
+        device.setUser(Build.USER);
+        device.setTime(Build.TIME);
+        device.setVersionSdkInt(Build.VERSION.SDK_INT);
+        device.setVersionCodename(Build.VERSION.CODENAME);
+        device.setVersionRelease(Build.VERSION.RELEASE);
+        device.setVersionIncremental(Build.VERSION.INCREMENTAL);
 
-        return basic;
+        return device;
     }
 
     private static String getIMEI(Context context) {
