@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:theme="@style/MyActivityTheme"
     tools:context="malik1989.areeb.mydeviceinfo.ui.activity.EntryActivity">
 
 </android.support.constraint.ConstraintLayout>
