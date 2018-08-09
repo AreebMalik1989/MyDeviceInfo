@@ -39,9 +39,8 @@ public class SimSubscriptionAdapter extends RecyclerView.Adapter<SimSubscription
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
             holder.simIcon.setImageBitmap(subscriptionInfo.createIconBitmap(MainApp.getApp()));
             holder.displayName.setText(String.valueOf(subscriptionInfo.getDisplayName()));
-            holder.slot.setText(String.valueOf(subscriptionInfo.getSimSlotIndex()));
+            holder.slot.setText(String.valueOf(subscriptionInfo.getSimSlotIndex() + 1));
             holder.carrierName.setText(String.valueOf(subscriptionInfo.getCarrierName()));
-            holder.number.setText(String.valueOf(subscriptionInfo.getNumber()));
             holder.roaming.setText(String.valueOf(subscriptionInfo.getDataRoaming()));
             holder.subscriptionId.setText(String.valueOf(subscriptionInfo.getSubscriptionId()));
             holder.iccId.setText(String.valueOf(subscriptionInfo.getIccId()));
@@ -52,7 +51,6 @@ public class SimSubscriptionAdapter extends RecyclerView.Adapter<SimSubscription
             holder.displayName.setText(R.string.lollipop_required);
             holder.slot.setText(R.string.lollipop_required);
             holder.carrierName.setText(R.string.lollipop_required);
-            holder.number.setText(R.string.lollipop_required);
             holder.roaming.setText(R.string.lollipop_required);
             holder.subscriptionId.setText(R.string.lollipop_required);
             holder.iccId.setText(R.string.lollipop_required);
@@ -60,8 +58,6 @@ public class SimSubscriptionAdapter extends RecyclerView.Adapter<SimSubscription
             holder.mcc.setText(R.string.lollipop_required);
             holder.mnc.setText(R.string.lollipop_required);
         }
-
-
     }
 
     @Override
@@ -73,7 +69,7 @@ public class SimSubscriptionAdapter extends RecyclerView.Adapter<SimSubscription
 
         private CardView cardView;
         private ImageView simIcon;
-        private TextView displayName, slot, carrierName, number, roaming, subscriptionId,
+        private TextView displayName, slot, carrierName, roaming, subscriptionId,
                             iccId, countryIso, mcc, mnc;
 
         public MyViewHolder(View itemView) {
@@ -84,7 +80,6 @@ public class SimSubscriptionAdapter extends RecyclerView.Adapter<SimSubscription
             displayName = itemView.findViewById(R.id.sim_display_name);
             slot = itemView.findViewById(R.id.sim_slot);
             carrierName = itemView.findViewById(R.id.sim_carrier_name);
-            number = itemView.findViewById(R.id.sim_number);
             roaming = itemView.findViewById(R.id.sim_roaming);
             subscriptionId = itemView.findViewById(R.id.subscription_id);
             iccId = itemView.findViewById(R.id.sim_icc_id);
