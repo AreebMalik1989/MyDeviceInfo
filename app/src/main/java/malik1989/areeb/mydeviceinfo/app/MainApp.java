@@ -2,10 +2,6 @@ package malik1989.areeb.mydeviceinfo.app;
 
 import android.app.Application;
 
-import malik1989.areeb.mydeviceinfo.collector.BasicInfoCollector;
-import malik1989.areeb.mydeviceinfo.collector.NetworkInfoCollector;
-import malik1989.areeb.mydeviceinfo.exchange.DataExchange;
-
 /**
  * Created by areeb on 24/7/18.
  */
