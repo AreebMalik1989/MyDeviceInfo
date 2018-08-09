@@ -15,8 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import malik1989.areeb.mydeviceinfo.R;
-import malik1989.areeb.mydeviceinfo.collector.WifiInfoCollector;
-import malik1989.areeb.mydeviceinfo.exchange.DataExchange;
 import malik1989.areeb.mydeviceinfo.ui.util.MyFragmentManager;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setupNavigationDrawer();
 
         myFragementManager = new MyFragmentManager(this, R.id.content_frame);
-        myFragementManager.updateFragment(myFragementManager.homeFragment);
+        myFragementManager.updateFragment(myFragementManager.deviceFragment);
+
     }
 
     @Override
@@ -90,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
         final ArrayAdapter<String> adapter;
 
         menu = getResources().getStringArray(R.array.fragments);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        listView = (ListView) findViewById(R.id.left_drawer);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        listView = findViewById(R.id.left_drawer);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, menu);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, menu);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
