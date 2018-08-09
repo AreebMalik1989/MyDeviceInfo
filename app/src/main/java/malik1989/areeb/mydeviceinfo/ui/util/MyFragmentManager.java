@@ -5,8 +5,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import malik1989.areeb.mydeviceinfo.ui.fragment.BatteryFragment;
-import malik1989.areeb.mydeviceinfo.ui.fragment.HomeFragment;
+import malik1989.areeb.mydeviceinfo.ui.fragment.DeviceFragment;
 import malik1989.areeb.mydeviceinfo.ui.fragment.NetworkFragment;
+import malik1989.areeb.mydeviceinfo.ui.fragment.SensorFragment;
+import malik1989.areeb.mydeviceinfo.ui.fragment.SimFragment;
 import malik1989.areeb.mydeviceinfo.ui.fragment.WifiFragment;
 
 /**
@@ -20,9 +22,10 @@ public class MyFragmentManager {
 
     public Fragment wifiFragment;
     public Fragment batteryFragment;
-    public Fragment homeFragment;
+    public Fragment deviceFragment;
     public Fragment networkFragment;
-    public Fragment apkFragment;
+    public Fragment simFragment;
+    public Fragment sensorFragment;
 
     public MyFragmentManager(AppCompatActivity activity, int contentFrameId){
         this.fragmentManager = activity.getSupportFragmentManager();
@@ -30,8 +33,10 @@ public class MyFragmentManager {
 
         this.wifiFragment = new WifiFragment();
         this.batteryFragment = new BatteryFragment();
-        this.homeFragment = new HomeFragment();
+        this.deviceFragment = new DeviceFragment();
         this.networkFragment = new NetworkFragment();
+        this.simFragment = new SimFragment();
+        this.sensorFragment = new SensorFragment();
     }
 
     public void updateFragment(Fragment fragment){
@@ -41,6 +46,7 @@ public class MyFragmentManager {
     public void switchFragments(String s){
 
         switch (s){
+
             case "Wifi":
                 this.updateFragment(wifiFragment);
                 break;
@@ -49,12 +55,20 @@ public class MyFragmentManager {
                 this.updateFragment(batteryFragment);
                 break;
 
-            case "Home":
-                this.updateFragment(homeFragment);
+            case "Device":
+                this.updateFragment(deviceFragment);
                 break;
 
             case "Network":
                 this.updateFragment(networkFragment);
+                break;
+
+            case "SIM":
+                this.updateFragment(simFragment);
+                break;
+
+            case "Sensor":
+                this.updateFragment(sensorFragment);
                 break;
         }
     }
