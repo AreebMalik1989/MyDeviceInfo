@@ -39,10 +39,6 @@ public class BatteryFragment extends BaseFragment implements BatteryObserver {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        update(DataExchange.battery);
-
-        DataExchange.battery.addObserver(this);
-
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
