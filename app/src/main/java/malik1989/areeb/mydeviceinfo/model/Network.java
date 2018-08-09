@@ -6,6 +6,8 @@ import android.telephony.NeighboringCellInfo;
 
 import java.util.List;
 
+import github.nisrulz.easydeviceinfo.base.EasyNetworkMod;
+
 /**
  * Created by areeb on 22/7/18.
  */
