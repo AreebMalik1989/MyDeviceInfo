@@ -1,7 +1,3 @@
 # MyDeviceInfo
-
-## Credits/Opens source libraries used:
-
-https://github.com/nisrulz/easydeviceinfo
-
-https://github.com/googlesamples/easypermissions
+---
+Android application to show information about the device and features.
