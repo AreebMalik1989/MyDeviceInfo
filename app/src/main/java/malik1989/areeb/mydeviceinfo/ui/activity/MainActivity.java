@@ -14,6 +14,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.HashMap;
+
+import github.areebmalik1989.notifier.Notifier;
 import malik1989.areeb.mydeviceinfo.R;
 import malik1989.areeb.mydeviceinfo.ui.util.MyFragmentManager;
 
@@ -72,9 +75,23 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
 
         switch (item.getItemId()){
-            case R.id.info:
+
+            case R.id.about:
                 intent = new Intent(getBaseContext(), InfoActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.credits:
+
+                HashMap<String, String> licenceMap = new HashMap<>();
+                licenceMap.put(getString(R.string.easydeviceinfo), getString(R.string.easydeviceinfo_licence));
+                licenceMap.put(getString(R.string.easypermissions), getString(R.string.easypermissions_licence));
+
+                String title = getString(R.string.credits_licence);
+
+                Notifier notifier = new Notifier(this);
+                notifier.showNotice(title, licenceMap);
+
                 break;
         }
 
