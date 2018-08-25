@@ -24,6 +24,10 @@ android {
 
 dependencies {
 
+    implementation ('github.areebmalik1989:notifier:1.0')
+
+    implementation project(':device-info-core')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:27.1.1'
