@@ -1,7 +1,10 @@
 package malik1989.areeb.mydeviceinfo.ui.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -17,6 +20,8 @@ import android.widget.ListView;
 import java.util.HashMap;
 
 import github.areebmalik1989.notifier.Notifier;
+import github.areebmalik1989.simplify_about.AboutActivityManager;
+import github.areebmalik1989.simplify_resources.SimplifyPackage;
 import malik1989.areeb.mydeviceinfo.R;
 import malik1989.areeb.mydeviceinfo.ui.util.MyFragmentManager;
 
@@ -72,13 +77,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         super.onOptionsItemSelected(item);
 
-        Intent intent;
-
         switch (item.getItemId()){
 
             case R.id.about:
-                intent = new Intent(getBaseContext(), InfoActivity.class);
-                startActivity(intent);
+
+                launchAboutActivity();
                 break;
 
             case R.id.credits:
@@ -125,6 +128,19 @@ public class MainActivity extends AppCompatActivity {
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.drawer_open, R.string.drawer_close);
         toggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(toggle);
+    }
+
+    private void launchAboutActivity(){
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+        PackageInfo packageInfo = SimplifyPackage.getPackageInfo(this);
+
+        AboutActivityManager aboutActivityManager = new AboutActivityManager(MainActivity.this);
+        aboutActivityManager.startActivity(getString(R.string.app_name),
+                packageInfo.versionName, String.valueOf(packageInfo.versionCode),
+                getString(R.string.areeb),
+                getString(R.string.areeb_email), bitmap);
+
     }
 
 }
