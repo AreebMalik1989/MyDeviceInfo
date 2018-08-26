@@ -26,6 +26,8 @@ dependencies {
 
     implementation ('github.areebmalik1989:notifier:1.0')
 
+    implementation project(':simplify-about')
+    implementation project(':simplify-resources')
     implementation project(':device-info-core')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
