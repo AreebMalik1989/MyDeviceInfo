@@ -19,8 +19,8 @@ import android.widget.ListView;
 
 import java.util.HashMap;
 
-import github.areebmalik1989.notifier.Notifier;
-import github.areebmalik1989.simplify_about.AboutActivityManager;
+import github.areebmalik1989.simplify_activities.AboutActivityManager;
+import github.areebmalik1989.simplify_activities.Notifier;
 import github.areebmalik1989.simplify_resources.SimplifyPackage;
 import malik1989.areeb.mydeviceinfo.R;
 import malik1989.areeb.mydeviceinfo.ui.util.MyFragmentManager;
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchAboutActivity(){
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.raw.web_hi_res_512);
         PackageInfo packageInfo = SimplifyPackage.getPackageInfo(this);
 
         AboutActivityManager aboutActivityManager = new AboutActivityManager(MainActivity.this);
