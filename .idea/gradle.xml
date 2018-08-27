@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/device-info-core" />
-            <option value="$PROJECT_DIR$/../simplify-android/simplify-about" />
+            <option value="$PROJECT_DIR$/../simplify-android/simplify-activities" />
             <option value="$PROJECT_DIR$/../simplify-android/simplify-resources" />
           </set>
         </option>
